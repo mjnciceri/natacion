@@ -1,3 +1,11 @@
 {
-    "GENERAL_APP_NAME": "Natación"
+    "GENERAL_APP_NAME": "Natación",
+    "GENERAL_SEND": "Enviar",
+    
+    "USER_NAME": "Nombre",
+    "USER_EMAIL": "Email",
+    "USER_PASSWORD": "Contraseña",
+    
+    "SIGNUP_TITLE" : "Registrate"
+
 }
