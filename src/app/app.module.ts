@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { Http } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -32,6 +32,7 @@ export function createTranslateLoader(http: Http) {
     ListPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings),
