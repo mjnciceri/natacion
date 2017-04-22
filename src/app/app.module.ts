@@ -7,6 +7,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { Signup } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +30,8 @@ export function createTranslateLoader(http: Http) {
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    Signup,
   ],
   imports: [
     HttpModule,
@@ -48,7 +50,8 @@ export function createTranslateLoader(http: Http) {
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    Signup,
   ],
   providers: [
     StatusBar,
