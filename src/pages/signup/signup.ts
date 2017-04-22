@@ -12,15 +12,15 @@ import { Dialogs } from '@ionic-native/dialogs';
 })
 export class Signup {
     
-  account: {name: string, email: string, password: string} = {
-    name: 'Test Human',
-    email: 'test@example.com',
-    password: 'test'
-  };
+    account: {name: string, email: string, password: string} = {
+        name: 'Test Human',
+        email: 'test@example.com',
+        password: 'test'
+    };
 
-  constructor(public navCtrl: NavController, public auth: Auth, public user: User, public toastCtrl: ToastController, public translate: TranslateService, private dialogs: Dialogs) {
-      translate.setDefaultLang('es');
-  }
+    constructor(public navCtrl: NavController, public auth: Auth, public user: User, public toastCtrl: ToastController, public translate: TranslateService, private dialogs: Dialogs) {
+        translate.setDefaultLang('es');
+    }
   
     doSignup() {
         // Attempt to login in through our User service
