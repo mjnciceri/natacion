@@ -3,10 +3,12 @@ import { NavController, ToastController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../../pages/home/home';
 import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
+import { Dialogs } from '@ionic-native/dialogs';
 
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',
+  providers: [Dialogs]
 })
 export class Signup {
     
@@ -16,7 +18,7 @@ export class Signup {
     password: 'test'
   };
 
-  constructor(public navCtrl: NavController, public auth: Auth, public user: User, public toastCtrl: ToastController, translate: TranslateService) {
+  constructor(public navCtrl: NavController, public auth: Auth, public user: User, public toastCtrl: ToastController, public translate: TranslateService, private dialogs: Dialogs) {
       translate.setDefaultLang('es');
   }
   
@@ -27,12 +29,32 @@ export class Signup {
             }, (err: IDetailedError<string[]>) => {
                 for (let e of err.details) {
                     if (e === 'conflict_email') {
-                      alert('Email already exists.');
+                        this.showError();
                     } else {
                       // handle other errors
                     }
                 }
         });
-  }
-
+    }
+    
+    showError() {
+        
+        var texts = {message: "", title: "", button : ""};
+        
+        this.translate.get("SIGNUP_ERROR_MAIL_EXISTS").subscribe(translation => {
+            texts.message = translation;
+        });
+        
+        this.translate.get("GENERAL_ERROR").subscribe(translation => {
+            texts.title = translation;
+        });
+        
+        this.translate.get("GENERAL_ACCEPT").subscribe(translation => {
+            texts.button = translation;
+        });
+        
+        this.dialogs.alert(texts.message, texts.title, texts.button);
+        
+    }
+    
 }

@@ -1,11 +1,15 @@
 {
     "GENERAL_APP_NAME": "Natación",
     "GENERAL_SEND": "Enviar",
+    "GENERAL_ACCEPT" : "Aceptar",
+    "GENERAL_ERROR" : "Error",
     
     "USER_NAME": "Nombre",
     "USER_EMAIL": "Email",
     "USER_PASSWORD": "Contraseña",
     
-    "SIGNUP_TITLE" : "Registrate"
+    "SIGNUP_TITLE" : "Registrate",
+    
+    "SIGNUP_ERROR_MAIL_EXISTS" : "El correo ingresado ya existe, intentá ingresar o recuperar tu clave"
 
 }
