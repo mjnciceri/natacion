@@ -4,10 +4,8 @@ import { Http, HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { Signup } from '../pages/signup/signup';
+import { NatacionApp } from './app.component';
+import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,15 +26,13 @@ export function createTranslateLoader(http: Http) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    ListPage,
-    Signup,
+    NatacionApp,
+    SignupPage,
   ],
   imports: [
     HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(NatacionApp),
     CloudModule.forRoot(cloudSettings),
     TranslateModule.forRoot({
       loader: {
@@ -48,10 +44,8 @@ export function createTranslateLoader(http: Http) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage,
-    Signup,
+    NatacionApp,
+    SignupPage,
   ],
   providers: [
     StatusBar,

@@ -10,7 +10,7 @@ import { Dialogs } from '@ionic-native/dialogs';
   templateUrl: 'signup.html',
   providers: [Dialogs]
 })
-export class Signup {
+export class SignupPage {
     
     account: {name: string, email: string, password: string} = {
         name: 'Test Human',
