@@ -7,7 +7,7 @@ import { Dialogs } from '@ionic-native/dialogs';
 
 @Component({
   selector: 'page-signup',
-  templateUrl: 'signup.html',
+  templateUrl: 'signup-page.html',
   providers: [Dialogs]
 })
 export class SignupPage {
