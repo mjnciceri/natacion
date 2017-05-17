@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
 import { HomePage } from '../../pages/home/home';
+import { SignupPage } from '../../pages/signup-page/signup-page';
 import { TranslateService } from '@ngx-translate/core';
 
 /**
@@ -45,6 +46,10 @@ export class LoginPage {
                     }
                 }
         });
+  }
+
+  goToSignup(){
+    this.navCtrl.push(SignupPage);
   }
 
 }

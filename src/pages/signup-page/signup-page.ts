@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../../pages/home/home';
 import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
 import { Dialogs } from '@ionic-native/dialogs';
 
+@IonicPage()
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup-page.html',
