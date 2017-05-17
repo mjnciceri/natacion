@@ -9,21 +9,21 @@
 
 <ion-content>
   
-  <form (submit)="doLogin()">
+  <form (submit)="doLogin()" #loginForm="ngForm">
     <ion-list>
 
       <ion-item>
         <ion-label fixed>{{ 'USER_EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+        <ion-input type="email" required [(ngModel)]="account.email" name="email" #email="ngModel"></ion-input>
+        
       </ion-item>
-
       <ion-item>
         <ion-label fixed>{{ 'USER_PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+        <ion-input type="password" required [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
       <div padding>
-        <button ion-button color="primary" block>{{ 'GENERAL_SEND' | translate }}</button>
+        <button [disabled]="!loginForm.form.valid" ion-button color="primary" block>{{ 'GENERAL_SEND' | translate }}</button>
       </div>
 
     </ion-list>

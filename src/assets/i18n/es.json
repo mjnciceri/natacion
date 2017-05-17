@@ -12,7 +12,8 @@
     
     "SIGNUP_ERROR_MAIL_EXISTS" : "El correo ingresado ya existe, intentá ingresar o recuperar tu clave",
 
-    "LOGIN_TITLE" : "Registrate",
-    "LOGIN_NEED_ACCOUNT" : "¿No tenés una cuenta?"
+    "LOGIN_TITLE" : "Ingreso",
+    "LOGIN_NEED_ACCOUNT" : "¿No tenés una cuenta?",
+    "LOGIN_ERROR_UNAUTHORIZED" : "El usuario y/o contraseña no son válidos"
 
 }

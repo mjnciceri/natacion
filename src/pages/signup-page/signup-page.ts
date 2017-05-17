@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { HomePage } from '../../pages/home/home';
 import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
@@ -19,7 +19,7 @@ export class SignupPage {
         password: 'test'
     };
 
-    constructor(public navCtrl: NavController, public auth: Auth, public user: User, public toastCtrl: ToastController, public translate: TranslateService, private dialogs: Dialogs) {
+    constructor(public navCtrl: NavController, public auth: Auth, public user: User, public translate: TranslateService, private dialogs: Dialogs) {
         translate.setDefaultLang('es');
     }
   
