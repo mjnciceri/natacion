@@ -55,5 +55,5 @@ describe('Component: Root Component', () => {
     it('initialises with a root page of Login when not authenticated', () => {
         expect(comp['rootPage']).toBe(LoginPage);
     });
- 
+
 });
