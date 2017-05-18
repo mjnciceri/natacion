@@ -1,6 +1,5 @@
 {
   "name": "Natacion",
   "app_id": "fa2718a1",
-  "v2": true,
-  "typescript": true
+  "type": "ionic-angular"
 }
