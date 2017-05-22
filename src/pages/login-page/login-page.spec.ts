@@ -36,7 +36,7 @@ describe('Component: Root Component', () => {
                 Account,
                 {provide: NavController, useValue: navCtrl},
                 {provide: NavParams, useValue: navParams},
-                {provide: TranslateService},
+                {provide: TranslateLoader},
                 {provide: Auth, useValue: auth},
                 {provide: User, useValue: user},
                 {provide: ToastController, useValue: toastCtrl}
